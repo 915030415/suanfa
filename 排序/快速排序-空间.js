@@ -20,5 +20,5 @@ function quickSort(arr) {
 }
 
 quickSort.sortName = "快速排序（空间版）"
-
+quickSort([1111])
 // module.exports = quickSort
