@@ -29,9 +29,10 @@
     著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-let removeElement = function (nums, val) {
-  let i = 0;
-  let j = 0;
+function removeElement(nums, val) {
+  let i = 0; // 表示 arr 元素的个数
+  let j = 0; // 表示 [0,j] 中存着不为val的值
+
 
   while (i < nums.length) {
     let num = nums[i];
@@ -44,12 +45,7 @@ let removeElement = function (nums, val) {
   }
   console.log(nums, 'log');
   return j;
-};
+}
+// 数组里面出现的第一个 val 前的值 就是想要的数组 后面的就不用管了
 
-
-console.log(removeElement([1, 4, 5, 5, 4, 5, 6, 75, 5, 5, 5, 76, 7, 3, 5], 5), 'log');
-// removeElement([3, 2, 2, 3], 3);
-
-/**
- * 这题用的是双指针法，慢指针指向待替换的位置，等到读取到非目标值的时候，就替换到那个位置，然后把慢指针前进。
- */
+console.log(removeElement([1, 4, 5, 5, 4, 5, 6, 33, 5, 5, 5, 76, 7, 3, 5], 5), 'log');
